@@ -76,3 +76,15 @@ game();let deadLine = {
 };
 
 let gameOver = false;
+// Dead line
+ctx.fillStyle = "black";
+ctx.fillRect(deadLine.x, deadLine.y, deadLine.w, deadLine.h);if (
+    player.x < deadLine.x + deadLine.w &&
+    player.x + player.w > deadLine.x &&
+    player.y < deadLine.y + deadLine.h &&
+    player.y + player.h > deadLine.y
+) {
+    gameOver = true;
+    alert("💀 Game Over!");
+    location.reload();
+}
