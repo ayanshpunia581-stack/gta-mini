@@ -68,4 +68,11 @@ requestAnimationFrame(game);
 
 }
 
-game();
+game();let deadLine = {
+    x: 0,
+    y: 250,
+    w: 900,
+    h: 10
+};
+
+let gameOver = false;
